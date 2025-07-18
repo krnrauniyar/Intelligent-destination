@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details - NepalTravel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-mountain"></i>
+                    <span class="logo-text">NepalTravel</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="dashboard.html" class="button outline small">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                    <button class="button outline small" onclick="logoutUser()">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="detail-main">
+        <!-- Hero Section with Large Image -->
+        <section class="detail-hero">
+            <div class="hero-image-container">
+                <img id="destinationImage" src="/placeholder.svg" alt="" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 id="destinationName" class="destination-title"></h1>
+                    <p id="destinationLocation" class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <span></span>
+                    </p>
+                    <div class="rating-display">
+                        <div id="destinationStars" class="stars"></div>
+                        <span id="destinationRating" class="rating-number"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Content -->
+        <section class="detail-content">
+            <div class="container">
+                <div class="detail-layout">
+                    <!-- Main Content Column -->
+                    <div class="main-content">
+                        <!-- About Section -->
+                        <div class="content-card">
+                            <h2>About This Destination</h2>
+                            <p id="destinationDescription" class="description-text"></p>
+                        </div>
+
+                        <!-- Highlights Section -->
+                        <div class="content-card">
+                            <h2>Highlights</h2>
+                            <ul id="destinationHighlights" class="highlights-list"></ul>
+                        </div>
+
+                        <!-- Activities Section -->
+                        <div class="content-card">
+                            <h2>Activities</h2>
+                            <div id="destinationActivities" class="activities-tags"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="sidebar-content">
+                        <!-- Trip Information -->
+                        <div class="content-card">
+                            <h3>Trip Information</h3>
+                            <div class="trip-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <div class="detail-info">
+                                        <span class="detail-label">Price Range</span>
+                                        <span id="destinationPrice" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div class="detail-info">
+                                        <span class="detail-label">Duration</span>
+                                        <span id="destinationDuration" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-wallet"></i>
+                                    <div class="detail-info">
+                                        <span class="detail-label">Budget Level</span>
+                                        <span id="destinationBudget" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <div class="detail-info">
+                                        <span class="detail-label">Best Season</span>
+                                        <span id="destinationSeason" class="detail-value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Travel Types -->
+                        <div class="content-card">
+                            <h3>Travel Types</h3>
+                            <div id="destinationTypes" class="type-tags"></div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="content-card">
+                            <button class="button primary full-width">
+                                <i class="fas fa-heart"></i> Add to Wishlist
+                            </button>
+                            <button class="button secondary full-width">
+                                <i class="fas fa-share"></i> Share Destination
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/destinations.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>
